@@ -4,6 +4,7 @@ This directory contains daily news analysis reports with causal event analysis a
 
 ## Recent Reports
 
+- [August 30, 2025](2025-08-30.md)
 - [August 29, 2025](2025-08-29.md)
 - [August 28, 2025](2025-08-28.md)
 - [August 27, 2025](2025-08-27.md)
@@ -11,4 +12,4 @@ This directory contains daily news analysis reports with causal event analysis a
 
 ---
 
-*Last updated: 2025-08-29 21:10:01*
+*Last updated: 2025-08-30 07:13:37*
