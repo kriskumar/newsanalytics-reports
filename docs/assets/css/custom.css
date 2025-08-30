@@ -1,0 +1,279 @@
+/* Bespoken-inspired terminal theme for MkDocs */
+
+:root {
+  /* Dark theme colors inspired by Bespoken */
+  --md-primary-fg-color: #1e1e2e;
+  --md-primary-fg-color--light: #313244;
+  --md-primary-fg-color--dark: #181825;
+  --md-accent-fg-color: #4ec9b0;
+  --md-accent-fg-color--transparent: #4ec9b01a;
+  
+  /* Terminal-inspired colors */
+  --terminal-bg: #1e1e2e;
+  --terminal-text: #cdd6f4;
+  --terminal-accent: #4ec9b0;
+  --terminal-blue: #569cd6;
+  --terminal-purple: #c678dd;
+  --terminal-orange: #d19a66;
+  --terminal-red: #e06c75;
+  --terminal-yellow: #e5c07b;
+  --terminal-green: #98c379;
+  
+  /* Font stack */
+  --md-text-font: "JetBrains Mono", "Departure Mono", "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+  --md-code-font: "JetBrains Mono", "Departure Mono", "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+}
+
+/* Global font application */
+body, .md-typeset {
+  font-family: var(--md-text-font) !important;
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Remove border radius for terminal-like appearance */
+* {
+  border-radius: 0 !important;
+}
+
+/* Header styling */
+.md-header {
+  background: var(--terminal-bg);
+  border-bottom: 1px solid var(--terminal-accent);
+}
+
+.md-header__title {
+  color: var(--terminal-accent);
+  font-weight: 700;
+}
+
+/* Navigation styling */
+.md-nav__title {
+  color: var(--terminal-accent);
+  font-weight: 600;
+}
+
+.md-nav__item--active > .md-nav__link {
+  color: var(--terminal-accent);
+}
+
+/* Content area */
+.md-main__inner {
+  margin-top: 0;
+}
+
+/* Typography enhancements */
+.md-typeset h1 {
+  color: var(--terminal-accent);
+  font-weight: 700;
+  border-bottom: 2px solid var(--terminal-accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  color: var(--terminal-blue);
+  font-weight: 600;
+  border-bottom: 1px solid var(--terminal-blue);
+  padding-bottom: 0.3rem;
+}
+
+.md-typeset h3 {
+  color: var(--terminal-purple);
+  font-weight: 600;
+}
+
+.md-typeset h4 {
+  color: var(--terminal-orange);
+  font-weight: 600;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--terminal-blue);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.md-typeset a:hover {
+  color: var(--terminal-accent);
+  text-decoration: solid;
+}
+
+/* Code styling */
+.md-typeset code {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-accent);
+  padding: 0.1rem 0.3rem;
+  font-size: 0.9em;
+}
+
+.md-typeset pre {
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-accent);
+  color: var(--terminal-text);
+}
+
+.md-typeset pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Syntax highlighting */
+.highlight .k { color: var(--terminal-purple); } /* Keywords */
+.highlight .s { color: var(--terminal-green); }  /* Strings */
+.highlight .n { color: var(--terminal-text); }   /* Names */
+.highlight .c { color: #6c7086; font-style: italic; } /* Comments */
+.highlight .nb { color: var(--terminal-yellow); } /* Built-ins */
+.highlight .o { color: var(--terminal-accent); }  /* Operators */
+
+/* Tables */
+.md-typeset table {
+  border: 1px solid var(--terminal-accent);
+}
+
+.md-typeset th {
+  background: var(--terminal-bg);
+  color: var(--terminal-accent);
+  border: 1px solid var(--terminal-accent);
+  font-weight: 700;
+}
+
+.md-typeset td {
+  border: 1px solid var(--terminal-accent);
+}
+
+/* Blockquotes */
+.md-typeset blockquote {
+  border-left: 4px solid var(--terminal-accent);
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  padding-left: 1rem;
+}
+
+/* Lists */
+.md-typeset ul li::marker {
+  color: var(--terminal-accent);
+}
+
+.md-typeset ol li::marker {
+  color: var(--terminal-accent);
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border: 1px solid var(--terminal-accent);
+  background: var(--terminal-bg);
+}
+
+.md-typeset .admonition-title {
+  background: var(--terminal-accent);
+  color: var(--terminal-bg);
+  font-weight: 700;
+}
+
+/* Search */
+.md-search__input {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-accent);
+}
+
+.md-search__input::placeholder {
+  color: #6c7086;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--terminal-accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-blue);
+}
+
+/* Footer */
+.md-footer {
+  background: var(--terminal-bg);
+  border-top: 1px solid var(--terminal-accent);
+}
+
+/* Copy button for code blocks */
+.md-clipboard {
+  color: var(--terminal-accent);
+}
+
+.md-clipboard:hover {
+  color: var(--terminal-blue);
+}
+
+/* Custom styling for news analysis content */
+.news-item {
+  border-left: 3px solid var(--terminal-blue);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.investment-opportunity {
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-green);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.risk-indicator {
+  color: var(--terminal-red);
+  font-weight: 600;
+}
+
+.growth-indicator {
+  color: var(--terminal-green);
+  font-weight: 600;
+}
+
+/* Table of contents */
+.md-nav--secondary .md-nav__link--active {
+  color: var(--terminal-accent);
+  font-weight: 600;
+}
+
+/* Date navigation */
+.date-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-accent);
+  margin: 1rem 0;
+}
+
+.date-nav a {
+  color: var(--terminal-blue);
+  text-decoration: none;
+}
+
+.date-nav a:hover {
+  color: var(--terminal-accent);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+  
+  .date-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
